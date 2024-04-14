@@ -614,7 +614,7 @@
 
           // if (btcHighValue !== res.highPrice) {
           //   btcHighValue = res.highPrice;
-          btcHigh.innerHTML = addComma(parseInt(+res.hight * rate, 10));
+          btcHigh.innerHTML = addComma(parseInt(+res.high * rate, 10));
           // }
           //
           // if (btcLowValue !== res.lowPrice) {
@@ -623,8 +623,8 @@
           // }
 
           btcPercent.innerHTML =
-            (+res.priceChangePercent > 0 ? "+" : "") +
-            (+res.priceChangePercent).toFixed(2);
+            (+res.percent_change_24 > 0 ? "+" : "") +
+            (+res.percent_change_24).toFixed(2);
 
       /*    if (RATES.CAD) {
             var otherPrice =
