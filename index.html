@@ -41,9 +41,9 @@
 			.price {
 				font-size: 12em;
 			}
-			
+
 			.footer {
-				position: absolute; 
+				position: absolute;
 				bottom: 0;
 				right: 0;
 				font-size: 0.6em;
@@ -97,11 +97,11 @@
 			}
 			return params;
 		}
-		
-		var getConfig = getSearchParameters(); 
+
+		var getConfig = getSearchParameters();
 
 		function ticker() {
-			ajax("https://www.bitstamp.net/api/ticker/btcusd", function (data) {
+			ajax("https://athrunarthur.com/api/bitstamp/api/ticker/btcusd", function (data) {
 				updateById("price", numberWithCommas(data.bid));
 				updateById("change", (data.bid > data.open ? "+" : "") + numberWithCommas((data.bid-data.open).toFixed(2)) + " (" + (((data.bid-data.open)/data.bid) * 100).toFixed(2) + "%)");
 				updateById("low", numberWithCommas(data.low));
@@ -109,7 +109,7 @@
 			})
 		};
 
-		var updateFreq = 90; // Refresh ticker values every n seconds
+		var updateFreq = 95; // Refresh ticker values every n seconds
 		if(getConfig.hasOwnProperty('updateFreq')) {
 			updateFreq = getConfig.updateFreq;
 		}
